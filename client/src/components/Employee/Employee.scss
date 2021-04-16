@@ -1,0 +1,12 @@
+.Emp {
+
+    &__top-container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__bot-container{
+        display: flex;
+        justify-content: center;
+    }
+}
