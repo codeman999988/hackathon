@@ -1,5 +1,7 @@
 import React from 'react'
 import './Header.scss'
+import chevron from '../../assets/icons/cheveron.png'
+import profilepic from '../../assets/icons/default.png'
 
 export default function Header() {
   return (
@@ -23,8 +25,8 @@ export default function Header() {
       <option>2025</option>
       <option>2026</option>
       </select>
-      <div className="header__placeholder"></div>
-      {/* <img></img>     */}
+      <img className="header__placeholder" src={profilepic} alt="profilepicture"></img>
+      <img className="chevron"src={chevron} alt="chevron"></img>    
     </div>
   )
 }
