@@ -4,38 +4,48 @@ import data1 from "../../Data/Nivo.json";
 import "./lineGraph.scss";
 // import axios from "axios";
 import { ResponsiveLine } from "@nivo/line";
-import Empdata from "../../Data/employeeData.json";
+import EmpData from "../../Data/employeeData.json";
 
-const colorarray = ["hsl(99, 70%, 50%)","hsl(336, 70%, 50%)", "hsl(320, 70%, 50%)", "hsl(89, 70%, 50%)", "hsl(175, 70%, 50%)", "hsl(227, 70%, 50%)", "hsl(127, 70%, 50%)", "hsl(4, 70%, 50%)", "hsl(342, 70%, 50%)",]
+const colorarray = [
+  "hsl(99, 70%, 50%)",
+  "hsl(336, 70%, 50%)",
+  "hsl(320, 70%, 50%)",
+  "hsl(89, 70%, 50%)",
+  "hsl(175, 70%, 50%)",
+  "hsl(227, 70%, 50%)",
+  "hsl(127, 70%, 50%)",
+  "hsl(4, 70%, 50%)",
+  "hsl(342, 70%, 50%)",
+];
 
-const data = EmpData.map(obj=>{
+const data = EmpData.map((obj) => {
   return {
-    "id": obj.name,
-  "color": colorarray[Math.floor(Math.random()*colorarray.length)],
-  "data": [
-    {
-      "x": "2/28/20-3/6/20",
-      "y": obj.wk1
-    },
-    {
-      "x": "3/7/20-3/13/20",
-      "y": obj.wk2
-    },
-    {
-      "x": "3/14/20-3/20/20",
-      "y": obj.wk3
-    },
-    {
-      "x": "3/21/20-3/27/20",
-      "y": obj.wk4
-    },
-    {
-      "x": "3/28/20-4/3/20",
-      "y": obj.wk5
-    },
-  ] 
-
-})
+    id: obj.name,
+    color: colorarray[Math.floor(Math.random() * colorarray.length)],
+    data: [
+      {
+        x: "2/28/20-3/6/20",
+        y: obj.wk1,
+      },
+      {
+        x: "3/7/20-3/13/20",
+        y: obj.wk2,
+      },
+      {
+        x: "3/14/20-3/20/20",
+        y: obj.wk3,
+      },
+      {
+        x: "3/21/20-3/27/20",
+        y: obj.wk4,
+      },
+      {
+        x: "3/28/20-4/3/20",
+        y: obj.wk5,
+      },
+    ],
+  };
+});
 
 class LineGraph extends Component {
   render() {
@@ -109,7 +119,6 @@ class LineGraph extends Component {
         />
       </section>
     );
-    
   }
 }
 
