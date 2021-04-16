@@ -18,7 +18,20 @@ import TreeModal from './components/TreeModal/TreeModal.jsx';
 function App() {
   return (
     <div className="App">
-      
+      {/* <SideBar />
+      <Header /> */}
+      <section className="App__top-section">
+        {/* <Projects />
+        <Employee />
+        <Hours /> */}
+      </section>
+      <section className="App__bot-section">
+        {/* <LineGraph /> */}
+        <div className="App__bot-right-section">
+          <TopPerformer />
+          {/* <TreeMap /> */}
+        </div>
+      </section>
     </div>
   );
 }
