@@ -37,8 +37,7 @@
 
 .table__scroll {
     height: 692px; 
-    overflow: scroll;
-    overflow-y: auto;
+    
 }
 
 .employee__table{
@@ -52,6 +51,8 @@ left: 350px;
 right: 20px;
 top: 0px;
 bottom: 0px;
+overflow: scroll;
+    overflow-y: auto;
 
 /* Neutral / White */
 
