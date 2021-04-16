@@ -15,38 +15,39 @@ import TreeMap from "./components/TreeMap/TreeMap.jsx";
 
 
 
-function App() {
-  return (
-    <Router>
-    <div className="App">
-      
-    
+class App extends Component {
+  state = {
+    data: null,
+  };
 
-      <SideBar />
-      
-      <Switch>
-      <section className="App__top-section">
-        {/* <Projects /> */}
-        <Route path="/employee" exact component={Employee} />
-        {/* <Hours /> */}
-      </section>
-    
-      
-       <section className="App__bot-section">
-       <Header />
-        <LineGraph />
-        <div className="App__bot-right-section">
-          {/* <TopPerformer /> */}
-          <TreeMap /> 
+  componentDidMount() {
+    axios.get("http://localhost:8080/").then((result) => {
+      this.setState({
+        data: result.data,
+      });
+    });
+  }
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <SideBar />
+        <section className="App__top-section">
+          <Projects />
+          <Employee />
+          <Hours />
+        </section>
 
-
-        </div>
-      </section>
-      </Switch>
-    
-    </div>
-  </Router>
-  );
+        <section className="App__bot-section">
+          <LineGraph />
+          <div className="App__bot-right-section">
+            {/* <TopPerformer /> */}
+            <TreeMap />
+          </div>
+        </section>
+      </div>
+    );
+  }
 }
 
 export default App;
