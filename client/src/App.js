@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import {BrowserRouter as Route, Link, Switch} from 'react-router-dom';
+import axios from 'axios';
+import React from 'react';
+import Header from '../components/Header/Header.jsx';
+import Employee from '../components/Employee/Employee.jsx';
+import Hours from '../components/Hours/Hours.jsx';
+import LineGraph from '../components/LineGraph/LineGraph.jsx';
+import PieChart from '../components/PieChart/PieChart.jsx';
+import Projects from '../components/Projects/Projects.jsx';
+import SideBar from '../components/SideBar/SideBar.jsx';
+import TopPerformer from '../components/TopPerformer/TopPerformer.jsx';
+import TreeMap from '../components/TreeMap/TreeMap.jsx';
+import TreeModal from '../components/TreeModal/TreeModal.jsx';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
     </div>
   );
 }
