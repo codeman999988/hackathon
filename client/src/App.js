@@ -1,5 +1,5 @@
 import "./App.scss";
-import { BrowserRouter as Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import axios from "axios";
 import React from "react";
 import Header from "./components/Header/Header.jsx";
@@ -14,28 +14,33 @@ import TreeMap from "./components/TreeMap/TreeMap.jsx";
 
 function App() {
   return (
-    
+    <Router>
     <div className="App">
-      <Header />
+
+      
       
       <SideBar />
       
-      
+      <Switch>
       <section className="App__top-section">
         {/* <Projects /> */}
-        <Employee />
+        <Route path="/employee" exact component={Employee} />
         {/* <Hours /> */}
       </section>
+    
       
        <section className="App__bot-section">
+       <Header />
         <LineGraph />
         <div className="App__bot-right-section">
           {/* <TopPerformer /> */}
           <TreeMap /> 
         </div>
       </section>
+      </Switch>
     
     </div>
+  </Router>
   );
 }
 

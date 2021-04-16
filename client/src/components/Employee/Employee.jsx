@@ -4,6 +4,9 @@ class Employee extends React.Component {
   render() {
     return (
       <section>
+
+      <h1>Editors</h1>
+
       <table style={{ width: "100%" }} >
         <tr>
           <th>Name</th>
