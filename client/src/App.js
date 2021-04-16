@@ -1,3 +1,4 @@
+
 import './App.scss';
 import {BrowserRouter as Route, Link, Switch} from 'react-router-dom';
 import axios from 'axios';
@@ -17,21 +18,30 @@ import TreeModal from './components/TreeModal/TreeModal.jsx';
 
 function App() {
   return (
+    
     <div className="App">
-      {/* <SideBar />
-      <Header /> */}
+
+      <Header />
+      
+      <SideBar />
+      
+      
       <section className="App__top-section">
-        {/* <Projects />
+        {/* <Projects /> */}
         <Employee />
-        <Hours /> */}
+        {/* <Hours /> */}
       </section>
-      <section className="App__bot-section">
-        {/* <LineGraph /> */}
+      
+       <section className="App__bot-section">
+        <LineGraph />
         <div className="App__bot-right-section">
-          <TopPerformer />
-          {/* <TreeMap /> */}
+          {/* <TopPerformer /> */}
+          <TreeMap /> 
+
+
         </div>
       </section>
+    
     </div>
   );
 }

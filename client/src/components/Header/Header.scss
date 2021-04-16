@@ -6,7 +6,7 @@
 
 .header {
   display: flex;
-  margin: 3rem 1rem 1.5rem 20rem;
+  margin: 3rem 1rem 1.5rem 17rem;
   align-items: center;
 
   &__title {
@@ -21,10 +21,14 @@
     border: none;
     border-radius: 1rem;
     border: 1px solid gray;
+    background-image: url("../../assets/icons/default.png");
+    background-repeat: no-repeat;
+    background-position-x: 0.7rem;
+    background-position-y: center;
   }
 
   ::placeholder {
-    padding-left: 1rem;
+    padding-left: 2rem;
   }
 
   &__months {
@@ -51,5 +55,10 @@
     width: 3rem;
     height: 3rem;
     margin-left: 2rem;
+    margin-right: 1rem;
+  }
+
+  .chevron {
+    margin-right: 2rem;
   }
 }
