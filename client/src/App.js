@@ -31,9 +31,17 @@ class App extends Component {
         <Header />
         <SideBar />
         <section className="App__top-section">
-          <Projects />
-          <Employee />
-          <Hours />
+          <div className="flex-container">
+            <div className="project-box">
+              <Projects />
+            </div>
+            <div className="project-box">
+              <Employee />
+            </div>
+            <div className="project-box">
+              <Hours />
+            </div>
+          </div>
         </section>
 
         <section className="App__bot-section">

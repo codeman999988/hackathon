@@ -63,6 +63,7 @@ class LineGraph extends Component {
             reverse: false,
           }}
           yFormat=" >-.2f"
+          // curve="natural"
           axisTop={null}
           axisRight={null}
           axisBottom={{
@@ -96,13 +97,13 @@ class LineGraph extends Component {
               direction: "column",
               justify: false,
               translateX: 100,
-              translateY: 0,
+              translateY: -20,
               itemsSpacing: 0,
               itemDirection: "left-to-right",
               itemWidth: 80,
-              itemHeight: 40,
+              itemHeight: 11,
               itemOpacity: 0.75,
-              symbolSize: 12,
+              symbolSize: 10,
               symbolShape: "circle",
               symbolBorderColor: "rgba(0, 0, 0, .5)",
               effects: [
