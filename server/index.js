@@ -86,7 +86,6 @@ const AVERAGEhoursperEMP = (start, end, employee) =>{
    console.log('86 HOURS', ((Math.ceil((Math.abs(moment(start).format('X') - moment(end).format('X')))/60 /60 /24))/7));
    let avghours = hours/((Math.ceil((Math.abs(moment(start).format('X') - moment(end).format('X')))/60 /60 /24))/7);
     return avghours;
-    return
 }
 
 
