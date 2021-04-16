@@ -4,7 +4,7 @@ const SERVER_PORT = 8080;
 const router = express.Router();
 const helperfunctionRoutes = require('./routes/helperfunctions.js');
 const moment = require('moment')
-// const cors = require('cors');
+const cors = require('cors');
 // const commentRoutes = require('./routes/comments.js');
 // const bodyParser = require('body-parser');
 // const fs = require('fs');
@@ -13,7 +13,7 @@ moment().format();
 
 // app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(bodyParser.json())                    
-// app.use(cors())
+app.use(cors())
 app.use(express.static('/server/public'))
 
 
@@ -105,6 +105,7 @@ const avgHoursOfEmployee = (arr, json) =>
     return newavgHours;
 }
 
+const DATA = avgHoursOfEmployee(employeelist, dataJSON);
 
 const EmployeeInfoList = avgHoursOfEmployee(employeelist, dataJSON);
 const PerformanceScore = (arr) =>{
@@ -132,7 +133,10 @@ const PerformanceScore = (arr) =>{
 }
 
 console.log("test");
+app.get('/', (req, res)=>{
+    res.json(DATA)
 
+})
 app.listen(SERVER_PORT, () => {
     console.log(`listening on ${SERVER_PORT}`);
     // console.log('empinfolist',EmployeeInfoList)
@@ -147,7 +151,7 @@ app.listen(SERVER_PORT, () => {
     // console.log(Math.ceil((Math.abs(moment(dataJSONsortId[0]["Start Date"]).format('X') - moment(dataJSONsortId[1]["Start Date"]).format('X')))/60 /60 /24)/7);
     // console.log(moment(dataJSONsortId[1]["Start Date"]).format('X'));
     // console.log('sortID',dataJSONsortId)
-    console.log('EMP HOURS WORKED',AVERAGEhoursperEMP("2021-03-09 00:00:00", "2021-03-17 00:00:00", "CARDONA, CAROLINA"))
+
 });
 
 // 28-6 "2021-02-28 00:00:00", "2021-03-06 00:00:00"
