@@ -1,7 +1,7 @@
 import './App.scss';
 import {BrowserRouter as Route, Link, Switch} from 'react-router-dom';
 import axios from 'axios';
-import React from 'react';
+import React, {Component} from 'react';
 import Header from './components/Header/Header.jsx';
 import Employee from './components/Employee/Employee.jsx';
 import Hours from './components/Hours/Hours.jsx';
@@ -15,7 +15,22 @@ import TreeModal from './components/TreeModal/TreeModal.jsx';
 
 
 
-function App() {
+class App extends Component {
+  state={
+    data: null
+  }
+  
+  componentDidMount() {
+  axios
+  .get('http://localhost:8080/')
+  .then(result=>{
+    this.setState({
+      data: result.data
+    })
+
+  })
+}
+  render () {
   return (
     <div className="App">
       {/* <SideBar />
@@ -34,6 +49,7 @@ function App() {
       </section>
     </div>
   );
+}
 }
 
 export default App;

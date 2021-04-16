@@ -5,6 +5,7 @@ import "./lineGraph.scss";
 // import axios from "axios";
 import { ResponsiveLine } from "@nivo/line";
 
+
 class LineGraph extends Component {
   render() {
     return (
@@ -77,7 +78,7 @@ class LineGraph extends Component {
         />
       </section>
     );
-    // )
+    
   }
 }
 
