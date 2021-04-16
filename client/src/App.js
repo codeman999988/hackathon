@@ -15,9 +15,11 @@ import TreeModal from './components/TreeModal/TreeModal.jsx';
 
 
 
+
 function App() {
   return (
     <div className="App">
+      <Header />
       
     </div>
   );
