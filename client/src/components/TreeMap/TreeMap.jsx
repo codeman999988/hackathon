@@ -20,6 +20,7 @@ class TreeMap extends Component {
           labelTextColor={{ from: "color", modifiers: [["darker", 1.2]] }}
           orientLabel={false}
           parentLabelTextColor={{ from: "color", modifiers: [["darker", 2]] }}
+          colors={{ scheme: "red_yellow_green" }}
           borderColor={{ from: "color", modifiers: [["darker", 0.1]] }}
         />
       </section>
