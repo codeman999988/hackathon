@@ -4,9 +4,9 @@ import axios from "axios";
 import React from "react";
 import Header from "./components/Header/Header.jsx";
 import Employee from "./components/Employee/Employee.jsx";
-// import Hours from "./components/Hours/Hours.jsx";
+import Hours from "./components/Hours/Hours.jsx";
 import LineGraph from "./components/LineGraph/LineGraph.jsx";
-// import Projects from "./components/Projects/Projects.jsx";
+import Projects from "./components/Projects/Projects.jsx";
 import SideBar from "./components/SideBar/SideBar.jsx";
 // import TopPerformer from "./components/TopPerformer/TopPerformer.jsx";
 import TreeMap from "./components/TreeMap/TreeMap.jsx";
@@ -15,7 +15,7 @@ import TreeMap from "./components/TreeMap/TreeMap.jsx";
 
 
 
-class App extends Component {
+class App extends React.Component {
   state = {
     data: null,
   };

@@ -30,6 +30,15 @@
 
 //     }
 // }
+.header{ 
+    // height: 10px; 
+    // overflow-y: scroll;
+}
+
+.table__scroll {
+    height: 692px; 
+    
+}
 
 .employee__table{
     height: 692px;
@@ -42,6 +51,8 @@ left: 350px;
 right: 20px;
 top: 0px;
 bottom: 0px;
+overflow: scroll;
+    overflow-y: auto;
 
 /* Neutral / White */
 
