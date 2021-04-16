@@ -19,9 +19,20 @@ import SideBar from './components/SideBar/SideBar.jsx';
 function App() {
   return (
     <div className="App">
-      <Header />
       <SideBar />
-      
+      <Header />
+      <section className="App__top-section">
+        <Projects />
+        <Employee />
+        <Hours />
+      </section>
+      <section className="App__bot-section">
+        <LineGraph />
+        <div className="App__bot-right-section">
+          <TopPerformer />
+          <TreeMap />
+        </div>
+      </section>
     </div>
   );
 }
