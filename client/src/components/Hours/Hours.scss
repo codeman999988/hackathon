@@ -1,0 +1,14 @@
+.Hours {
+
+    display: flex;
+    flex-direction: column;
+
+    &__top-container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__bot-container{
+        justify-content: center;
+    }
+}

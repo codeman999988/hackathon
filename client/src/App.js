@@ -12,13 +12,16 @@ import SideBar from "./components/SideBar/SideBar.jsx";
 import TreeMap from "./components/TreeMap/TreeMap.jsx";
 // import TreeModal from "./components/TreeModal/TreeModal.jsx";
 
+
+
+
 function App() {
   return (
     <Router>
     <div className="App">
+      
+    
 
-      
-      
       <SideBar />
       
       <Switch>
@@ -35,6 +38,8 @@ function App() {
         <div className="App__bot-right-section">
           {/* <TopPerformer /> */}
           <TreeMap /> 
+
+
         </div>
       </section>
       </Switch>
